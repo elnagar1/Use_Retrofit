@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <string name="app_name">الخبر</string>
+        <string name="api_key">45aee7294faf4c58af6bb6f58443ef4f</string>
+        <string name="readOnWeB">Lire l\'article en entier sur le web</string>
+        <string name="author">Auteur :</string>
+        <string name="share">partager</string>
+        <string name="my_favs">Mes favoris</string>
+
+</resources>

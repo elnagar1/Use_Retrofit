@@ -48,7 +48,7 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <RelativeLayout
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_width="match_parent"
             android:orientation="vertical"
             android:layout_margin="8dp">
@@ -149,10 +149,10 @@
                 android:padding="2dp"/>
 
             <TextView
+                android:id="@+id/news_author"
                 android:layout_margin="4dp"
                 android:layout_toRightOf="@id/authorIcon"
                 android:layout_below="@id/sepThree"
-                android:id="@+id/news_author"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -162,7 +162,12 @@
                 android:text="@string/author"
                 android:textSize="18sp" />
 
-
+            <WebView
+                android:id="@+id/webview"
+                android:layout_below="@id/news_author"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
         </RelativeLayout>
 
 

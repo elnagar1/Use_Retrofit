@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorDivide"
     android:orientation="vertical"
-    tools:context=".ui.main.MainActivity">
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button" />
+    android:paddingTop="5dp">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -20,15 +14,215 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tv"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:layout_gravity="center"
+                android:orientation="vertical">
 
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:id="@+id/frameLayout">
+
+                    <ImageButton
+                        android:id="@+id/HIMIT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        tools:srcCompat="@drawable/himit"
+                        tools:layout_conversion_absoluteHeight="200dp"
+                        tools:layout_editor_absoluteY="5dp"
+                        tools:layout_editor_absoluteX="55dp"
+                        tools:layout_conversion_absoluteWidth="249dp" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HIMIT"
+                        android:textColor="@color/colorsecondaryText"
+                        android:textSize="18dp"
+                        tools:layout_conversion_absoluteHeight="25dp"
+                        tools:layout_editor_absoluteY="8dp"
+                        tools:layout_editor_absoluteX="156dp"
+                        tools:layout_conversion_absoluteWidth="48dp" />
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/health"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:scaleType="fitCenter"
+                        tools:srcCompat="@drawable/health" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|top"
+                        android:layout_margin="3dp"
+                        android:text="Health"
+                        android:textColor="@color/colorsecondaryText"
+                        android:textSize="18dp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/sport"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:scaleType="fitCenter"
+                        tools:srcCompat="@drawable/sport" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|top"
+                        android:layout_margin="3dp"
+                        android:text="Sport"
+                        android:textColor="@color/colorsecondaryText"
+                        android:textSize="18dp" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/entertainment"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:scaleType="fitCenter"
+                        tools:srcCompat="@drawable/entertainment" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|top"
+                        android:layout_margin="3dp"
+                        android:text="Entertainment"
+                        android:textColor="@color/colorsecondaryText"
+                        android:textSize="18dp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/technology"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:scaleType="fitCenter"
+                        tools:srcCompat="@drawable/tech" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|top"
+                        android:layout_margin="3dp"
+                        android:text="Technology"
+                        android:textColor="@color/colorsecondaryText"
+                        android:textSize="18dp" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/business"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:scaleType="fitCenter"
+                        tools:srcCompat="@drawable/busin" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|top"
+                        android:layout_margin="3dp"
+                        android:text="Business"
+                        android:textColor="@color/colorsecondaryText"
+                        android:textSize="18dp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/science"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:scaleType="fitCenter"
+                        tools:srcCompat="@drawable/science" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|top"
+                        android:layout_margin="3dp"
+                        android:text="Science"
+                        android:textColor="@color/colorsecondaryText"
+                        android:textSize="18dp" />
+
+                </FrameLayout>
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
-</LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,63 +1,49 @@
 package com.example.news.ui.main;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-
+import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
-
 import com.example.news.R;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private MainActivityViewModel mainActivityViewModel ;
-
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
-
-
+    Intent intent;
+     final Context context = this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-         final TextView textView = findViewById(R.id.tv);
-        Button button = findViewById(R.id.button);
-        mainActivityViewModel = ViewModelProviders.of( this).get(MainActivityViewModel .class);
+        ImageView HIMIT = findViewById(R.id.HIMIT);
+        ImageView health= findViewById(R.id.health);
+        ImageView sports = findViewById(R.id.sport);
+        ImageView entertainment = findViewById(R.id.entertainment);
+        ImageView technology = findViewById(R.id.technology);
+        ImageView business = findViewById(R.id.business);
+        ImageView science = findViewById(R.id.science);
 
-
-        mainActivityViewModel.mutableLiveData.observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(String s) {
-                Log.e("ssssssssssssssss0", "successfully");
-                textView.setText(s);
-            }
-        });
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.e("ssssssssssssssss1", "successfully");
-                mainActivityViewModel.getNews();
-                Log.e("ssssssssssssssss2", "successfully");
-            }
-        });
-
-
-
-
-
-
-
+        HIMIT.setOnClickListener(this);
+        health.setOnClickListener(this);
+        sports.setOnClickListener(this);
+        entertainment.setOnClickListener(this);
+        technology.setOnClickListener(this);
+        business.setOnClickListener(this);
+        science.setOnClickListener(this);
+        intent=new Intent(this,NewsActivity.class);
     }
 
+    @Override
+    public void onClick(View v) {
+        if (v instanceof ImageView) {
+
+                intent.putExtra("category",v.getId());
+                context.startActivity(intent);
+            }
 
 
-}
+        }
+    }
+

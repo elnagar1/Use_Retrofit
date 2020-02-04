@@ -1,4 +1,4 @@
-package com.example.news.Data;
+package com.example.news.WebServices;
 
 import com.example.news.Models.NewsModel;
 
@@ -31,8 +31,8 @@ public static WebService getInstance(){
     return INSTANCE;
 }
 
-    public static Call<NewsModel> getPO() {
-        return api.getPosts("eg","0e52b6c2d0c64244b6e608a3a7b036ad");
+    public static Call<NewsModel> getPO(String category) {
+        return api.getPosts("eg",category,"0e52b6c2d0c64244b6e608a3a7b036ad");
     }
 
 }
